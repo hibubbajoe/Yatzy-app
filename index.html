@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+  <title>Yatzy</title>
+</head>
+
+<body>
+  <header>
+    <h1>Yatzy</h1>
+    <div class="nav">
+      <div class="profile-friends">Min Profil</div>
+      <div class="profile-friends">Vänner</div>
+    </div>
+  </header>
+  <div id="reload-start">
+    <label for="start-button" class="start-knapp" id="start-reload-label">Fyll i spelarnas namn och tryck</label>
+    <input type="button" value="Start" name="start-button" id="start-button">
+  </div>
+  <div class="enclosure">
+    <form id="whole-form" class="whole-table">
+      <table>
+        <tbody>
+          <tr class="headers">
+            <th>Spelare/Player</th>
+            <td><input type="text" placeholder="player1" class="playerName"></td>
+            <td><input type="text" placeholder="player2" class="playerName" /></td>
+            <td><input type="text" placeholder="player3" class="playerName" /></td>
+            <td><input type="text" placeholder="player4" class="playerName" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Ettor/Ones</th>
+            <td><input type="number" class="player-0"></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Tvåor/Twos</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Treor/Threes</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Fyror/Fours</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Femmor/Fives</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Sexor/Sixes</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="headers">
+            <th>Summa/Sum</th>
+            <td id="sum-player-0"></td>
+            <td id="sum-player-1"></td>
+            <td id="sum-player-2"></td>
+            <td id="sum-player-3"></td>
+          </tr>
+          <tr class="headers">
+            <th>Bonus</th>
+            <td id="player-0-bonus"></td>
+            <td id="player-1-bonus"></td>
+            <td id="player-2-bonus"></td>
+            <td id="player-3-bonus"></td>
+          </tr>
+          <tr class="bodies">
+            <th>Par/Pair</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Två par/Two pairs</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>retal/Three of a kind</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Fyrtal/Four of a kind</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Liten stege/Small straight</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Stor stege/Large straight</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Kåk/Full house</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Chans/Chance</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+          <tr class="bodies">
+            <th>Yatzy</th>
+            <td><input type="number" class="player-0" /></td>
+            <td><input type="number" class="player-1" /></td>
+            <td><input type="number" class="player-2" /></td>
+            <td><input type="number" class="player-3" /></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="headers">
+            <th>Totalt/Total</th>
+            <td id="total-player-0"></td>
+            <td id="total-player-1"></td>
+            <td id="total-player-2"></td>
+            <td id="total-player-3"></td>
+          </tr>
+        </tfoot>
+      </table>
+
+    </form>
+    <div id="dices-section">
+      <form>
+
+        <div>
+          <img class="diceArray" src="/dices/dice1.webp">
+          <label for="dice1"></label>
+          <input type="checkbox" class="checkBox" name="checkBox1">
+        </div>
+
+        <div>
+          <img class="diceArray" src="/dices/dice2.webp">
+          <label for="dice2"></label>
+          <input type="checkbox" class="checkBox" name="checkBox2">
+        </div>
+
+        <div>
+          <img class="diceArray" src="/dices/dice3.webp">
+          <label for="dice3"></label>
+          <input type="checkbox" class="checkBox" name="checkBox3">
+        </div>
+
+        <div>
+          <img class="diceArray" src="/dices/dice4.webp">
+          <label for="dice4"></label>
+          <input type="checkbox" class="checkBox" name="checkBox4">
+        </div>
+
+        <div>
+          <img class="diceArray" src="/dices/dice5.webp">
+          <label for="dice5"></label>
+          <input type="checkbox" class="checkBox" name="checkbox5">
+        </div>
+
+      </form>
+      <button id="throw-dice" class="throw-dice-css" type="button">3 kast kvar</button>
+      <div class="chat">
+        <div class="text-mock">
+
+        </div>
+        <div id="chat-input">
+          <input id="chat_name_input" type="text" placeholder="name">
+          <input id="chat_input" type="text" placeholder="Aa">
+          <button id="chat-btn" class="submit-button" placeholder="Aa">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/RandomDices.js"></script>
+</body>
+
+</html>
